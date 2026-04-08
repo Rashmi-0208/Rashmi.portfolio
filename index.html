@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rashmi Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+
+body{
+  background:#F8F6F2;
+  color:#1F2937;
+  font-family:'Inter',sans-serif;
+  padding-top:130px;
+}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:20px;
+  right:30px;
+  display:flex;
+  gap:10px;
+  z-index:1000;
+}
+
+.navbar a{
+  padding:6px 14px;
+  background:white;
+  border:1px solid #e5e7eb;
+  color:#1F2937;
+  text-decoration:none;
+  border-radius:20px;
+  font-size:0.8rem;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  background:#8B5E3C;
+}
+
+section{padding:40px 10%}
+
+h1,h2,h3{
+  font-family:'Poppins',sans-serif;
+}
+
+h2{
+  margin-bottom:25px;
+  font-size:2rem;
+  color:#8B5E3C;
+}
+
+/* CARD */
+.card{
+  background:white;
+  border:1px solid #e5e7eb;
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:25px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(139,94,60,0.25);
+}
+
+/* HERO */
+.hero-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:40px;
+}
+
+.hero-text h1{
+  font-size:3rem;
+}
+
+.hero-text span{
+  color:#8B5E3C;
+}
+
+.typing{
+  margin:15px 0;
+  color:#6B7280;
+  font-weight:600;
+}
+
+.hero-text p{
+  color:#4B5563;
+  line-height:1.6;
+  font-weight:500;
+}
+
+.hero-img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  overflow:hidden;
+  border:3px solid #8B5E3C;
+}
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* PROJECT GRID */
+.projects .card{
+  background:#f1ede7; /* light warm tone */
+  border:1px solid #e0d6c8;
+}
+
+.projects .card:hover{
+  box-shadow:0 10px 25px rgba(139,94,60,0.35);
+}
+
+/* PROJECT GRID */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  padding:10px 18px;
+  background:#8B5E3C;
+  color:white;
+  border-radius:8px;
+  text-decoration:none;
+  margin-top:10px;
+}
+
+.btn:hover{
+  background:#6e472d;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#6b7280;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <a href="#about">About</a>
+  <a href="#about">Resume</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section>
+  <div class="card hero-card">
+    <div class="hero-text">
+      <h1>Hello, I'm <span>Rashmi Sinha</span></h1>
+      <div class="typing" id="typing"></div>
+      <p style="font-weight:600; color:#8B5E3C;">B.Tech IT Student (4th Semester)</p>
+  
+      <p>I design and develop modern web experiences.  
+      I turn ideas into real-world projects using clean and efficient code.</p>
+      <a href="#projects" class="btn">View Work</a>
+    </div>
+    <div class="hero-img">
+      <img src="your-photo.jpg" alt="Rashmi">
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="card">
+    <h2>About Me</h2>
+    <p style="font-weight:500;">I enjoy creating frontend web solutions with a focus on intuitive interfaces, responsive layouts, and user-centered design. I emphasize efficient development, structured code, and smooth interactions to build scalable web applications. My goal is to deliver optimized performance and impactful digital experiences with a strong focus on usability.</p>
+
+    <br>
+    <h2>My Resume</h2>
+    <input type="file" id="cvUpload" accept=".pdf" />
+    <br><br>
+    <a id="downloadLink" class="btn" style="display:none;" download>Download CV</a>
+  </div>
+</section>
+
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="card">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Landslide and Flood Tracker</h3>
+        <p style="font-weight:500;">A web-based system for tracking, analyzing, and visualizing landslide and flood risks in real time.</p>
+      </div>
+      <div class="card">
+        <h3>Alumni Management System</h3>
+        <p style="font-weight:500;">Database-driven web application for managing alumni records.</p>
+      </div>
+      <div class="card">
+        <h3>My Portfolio</h3>
+        <p style="font-weight:500;">A modern and responsive portfolio website highlighting my frontend development skills, projects, and design expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="card">
+    <h2 style="text-align:center;">Skills & Expertise</h2>
+    <div class="projects">
+
+      <div class="card">
+        <h3>💻 Programming</h3>
+        <p>Java (Intermediate)</p>
+        <p>Python (Basic)</p>
+        <p>C++ (Learning)</p>
+      </div>
+
+      <div class="card">
+        <h3>🌐 Web Development</h3>
+        <p>HTML5 & CSS3</p>
+        <p>JavaScript</p>
+        <p>Responsive Design</p>
+      </div>
+
+      <div class="card">
+        <h3>🛠️ Tools & Tech</h3>
+        <p>Git & GitHub</p>
+        <p>VS Code</p>
+        <p>Supabase</p>
+      </div>
+
+      <div class="card">
+        <h3>🧠 Core Concepts</h3>
+        <p>Data Structures (DSA)</p>
+        <p>DBMS</p>
+        <p>Computer Networks</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="card">
+    <h2>Contact</h2>
+    <p style="font-weight:500;">Email: rashmi@gmail.com</p>
+    <p style="font-weight:500; margin-top:8px;">LinkedIn: <a href="https://www.linkedin.com/in/rashmi-sinha-640536324/" target="_blank" style="color:#8B5E3C; text-decoration:none;">View Profile</a></p>
+  </div>
+</section>
+
+<section>
+  <p style="text-align:center; font-weight:600; color:#8B5E3C; font-size:1.2rem;">Code. Create. Repeat.</p>
+</section>
+
+<footer>© 2026 Rashmi</footer>
+
+<script>
+const texts=["Frontend Developer","UI/UX Designer","Creative Problem Solver"];
+let i=0,j=0,current="",deleting=false;
+function type(){
+  let el=document.getElementById("typing");
+  if(!deleting && j<=texts[i].length){current=texts[i].substring(0,j++);} 
+  else if(deleting && j>=0){current=texts[i].substring(0,j--);} 
+  el.innerHTML=current;
+  if(j===texts[i].length) deleting=true;
+  if(j===0){ deleting=false; i=(i+1)%texts.length; }
+  setTimeout(type,deleting?50:100);
+}
+type();
+
+const upload=document.getElementById("cvUpload");
+const link=document.getElementById("downloadLink");
+upload.addEventListener("change",function(){
+  const file=this.files[0];
+  if(file){
+    const url=URL.createObjectURL(file);
+    link.href=url;
+    link.style.display="inline-block";
+    link.innerText="Download "+file.name;
+  }
+});
+</script>
+
+</body>
+</html>
